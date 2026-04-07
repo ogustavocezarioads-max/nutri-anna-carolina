@@ -9,14 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','700410568538422');fbq('track','PageView');
-</script>
+
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=700410568538422&ev=PageView&noscript=1"/></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -109,6 +102,20 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
 .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px 18px;display:none;justify-content:center;z-index:100;box-shadow:0 -3px 16px rgba(0,0,0,.06)}
 .sticky-cta a{display:block;background:var(--terra);color:#fff;font-size:15px;font-weight:500;padding:13px 32px;border-radius:60px;text-decoration:none;text-align:center;width:100%}
 @media(max-width:640px){.pq-grid{grid-template-columns:1fr}.sobre-inner{flex-direction:column;align-items:center;text-align:center}.sobre-fotos{width:100%;align-items:center}.sticky-cta{display:flex}body{padding-bottom:76px}.cards-grid{grid-template-columns:1fr 1fr}.dep-prints{grid-template-columns:1fr}}
+
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(44,31,24,.6);display:none;align-items:center;justify-content:center;z-index:999;backdrop-filter:blur(4px);padding:20px}
+.modal-overlay.active{display:flex}
+.modal-box{background:var(--white);padding:32px 24px;border-radius:16px;max-width:400px;width:100%;position:relative;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.mc{position:absolute;top:16px;right:16px;background:var(--nude);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid);font-size:18px;transition:background .2s}
+.mc:hover{background:var(--nude-dark);color:var(--text-dark)}
+.modal-box h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--text-dark);margin-bottom:8px;line-height:1.2;padding-right:20px}
+.modal-box>p{font-size:13px;color:var(--text-mid);margin-bottom:20px;line-height:1.6}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:13px;font-weight:500;color:var(--text-dark);margin-bottom:6px}
+.fg select,.fg input{width:100%;padding:10px 12px;border:1px solid var(--nude-dark);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text-dark);background:var(--off-white);outline:none;transition:border .2s;cursor:pointer}
+.fg select:focus,.fg input:focus{border-color:var(--terra)}
+.btn-m{display:block;width:100%;background:var(--verde);color:#fff;font-size:14px;font-weight:500;padding:14px;border-radius:60px;text-align:center;border:none;cursor:pointer;margin-top:20px;transition:background .2s}
+.btn-m:hover{background:#3E5736}
 </style>
 </head>
 <body>
@@ -117,7 +124,7 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
     <span class="hero-tag">Acompanhamento Nutricional</span>
     <h1>Chega de começar,<br>desistir e <em>culpar você mesma.</em></h1>
     <p class="hero-sub">Um acompanhamento pensado para mulheres com rotina real — que já tentaram antes e precisam de uma estratégia que funcione de verdade, com suporte e continuidade.</p>
-    <a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Quero saber mais sobre o acompanhamento</a>
+    <a href="https://wa.me/5521991009723" class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Quero saber mais sobre o acompanhamento</a>
     <p class="hero-trust">Atendimento em São Gonçalo e Icaraí · Niterói</p>
   </div>
 </section>
@@ -164,7 +171,7 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
       <li><span class="check"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,8.5 11,1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ajustes e revisões ao longo do processo — sem começar do zero</li>
       <li><span class="check"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,8.5 11,1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Foco em manutenção: o resultado que vem, fica</li>
     </ul>
-    <div style="margin-top:36px"><a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Quero agendar minha consulta</a></div>
+    <div style="margin-top:36px"><a href="https://wa.me/5521991009723" class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Quero agendar minha consulta</a></div>
   </div>
 </section>
 <section class="para-quem">
@@ -206,7 +213,7 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
         <p>Sou nutricionista especializada em emagrecimento feminino e cirurgia bariátrica. Trabalho todos os dias com mulheres que já tentaram de tudo — e finalmente encontraram um método que respeita a vida real delas.</p>
         <p>Meu acompanhamento não é uma dieta com lista de proibidos. É uma estratégia construída para a sua rotina, com suporte real e foco em resultado sustentável.</p>
         <p>Atendo em São Gonçalo e em Icaraí, Niterói.</p>
-        <div style="margin-top:24px"><a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna</a></div>
+        <div style="margin-top:24px"><a href="https://wa.me/5521991009723" class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna</a></div>
       </div>
     </div>
   </div>
@@ -224,7 +231,7 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
   <div class="container">
     <h2>Pronta para parar de<br><em>tentar sozinha?</em></h2>
     <p>Clica no botão abaixo, me conta sobre a sua situação e a gente conversa sobre o acompanhamento.</p>
-    <a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." class="btn-branco" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna no WhatsApp</a>
+    <a href="https://wa.me/5521991009723" class="btn-branco" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna no WhatsApp</a>
     <p class="cta-trust">Sem compromisso · Atendimento humanizado · Resultado sustentável</p>
   </div>
 </section>
@@ -241,17 +248,84 @@ footer a{color:rgba(255,255,255,.55);text-decoration:none}
       <div class="faq-item"><div class="faq-q">Onde fica o consultório?<span class="faq-icon">+</span></div><div class="faq-a">Atendo no Centro de São Gonçalo e em Icaraí, Niterói. Na primeira conversa combinamos o local mais conveniente.</div></div>
     </div>
     <div style="margin-top:40px;text-align:center">
-      <a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Ainda tem dúvida? Me chama no WhatsApp</a>
+      <a href="https://wa.me/5521991009723" class="btn-primary" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Ainda tem dúvida? Me chama no WhatsApp</a>
     </div>
   </div>
 </section>
 <footer>
   <p>© 2025 Anna Carolina · Nutricionista · São Gonçalo e Icaraí, Niterói</p>
-  <p style="margin-top:5px"><a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." onclick="fbq('track','Lead')" target="_blank">WhatsApp</a> · <a href="https://www.instagram.com/nutri.annacarol/" target="_blank">Instagram</a> · <a href="https://share.google/YLEquv2JdTyQEJjWM" target="_blank">Google</a></p>
+  <p style="margin-top:5px"><a href="https://wa.me/5521991009723" onclick="fbq('track','Lead')" target="_blank">WhatsApp</a> · <a href="https://www.instagram.com/nutri.annacarol/" target="_blank">Instagram</a> · <a href="https://share.google/YLEquv2JdTyQEJjWM" target="_blank">Google</a></p>
 </footer>
 <div class="sticky-cta">
-  <a href="https://wa.me/5521991009723?text=Ol%C3%A1%2C%20nutri%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20acompanhamento." onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna →</a>
+  <a href="https://wa.me/5521991009723" onclick="fbq('track','Lead')" target="_blank" rel="noopener">Falar com a Anna →</a>
 </div>
+
+
+<!-- Modal Qualificador (WhatsApp) -->
+<div class="modal-overlay" id="waModal">
+  <div class="modal-box">
+    <button class="mc" id="closeModal">&times;</button>
+    <h3>Antes de falarmos...</h3>
+    <p>Preencha de forma rápida para eu entender melhor como posso te ajudar.</p>
+    <form id="waForm">
+      <!-- ETAPA 1 -->
+      <div id="waStep1">
+        <div class="fg">
+          <label>Qual o seu nome?</label>
+          <input type="text" id="waNome" placeholder="Ex: Maria Eduarda" required>
+        </div>
+        <div class="fg">
+          <label>Seu WhatsApp (com DDD)</label>
+          <input type="tel" id="waTel" placeholder="(21) 99999-9999" required>
+        </div>
+        <button type="button" class="btn-m" id="btnNextStep">Próxima Etapa →</button>
+      </div>
+      <!-- ETAPA 2 -->
+      <div id="waStep2" style="display:none;">
+        <div class="fg">
+          <label>Qual seu principal objetivo hoje?</label>
+          <select id="waObj" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Emagrecimento sustentável">Emagrecimento sustentável</option>
+            <option value="Melhorar saúde e rotina">Melhorar saúde e rotina</option>
+            <option value="Acompanhamento pós-bariátrica">Acompanhamento pós-bariátrica</option>
+            <option value="Outro objetivo">Outro objetivo</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Você busca atendimento online ou presencial?</label>
+          <select id="waLocal" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Presencial em São Gonçalo">Presencial em São Gonçalo</option>
+            <option value="Presencial em Icaraí">Presencial em Icaraí</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Já fez acompanhamento nutricional antes?</label>
+          <select id="waAntes" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Sim, mas não consegui manter">Sim, mas não consegui manter</option>
+            <option value="Não, será a primeira vez">Não, será a primeira vez</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Você está buscando atendimento particular?</label>
+          <select id="waPart" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Sim, busco particular">Sim, busco particular</option>
+            <option value="Não, busco convênio">Não, busco convênio (Não atendemos)</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:20px;">
+          <button type="button" class="btn-m" id="btnPrevStep" style="background:#EAD9CB;color:var(--text-dark);margin-top:0;width:30%">←</button>
+          <button type="submit" class="btn-m" id="btnSubmitForm" style="margin-top:0;width:70%">Falar com a Anna no WhatsApp</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script>
 document.querySelectorAll('.faq-item').forEach(function(item){
   item.addEventListener('click',function(){
@@ -259,6 +333,85 @@ document.querySelectorAll('.faq-item').forEach(function(item){
     document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
     if(!isOpen)item.classList.add('open');
   });
+});
+
+const waModal = document.getElementById('waModal');
+const closeModal = document.getElementById('closeModal');
+const waForm = document.getElementById('waForm');
+const waStep1 = document.getElementById('waStep1');
+const waStep2 = document.getElementById('waStep2');
+const btnNextStep = document.getElementById('btnNextStep');
+const btnPrevStep = document.getElementById('btnPrevStep');
+const btnSubmitForm = document.getElementById('btnSubmitForm');
+const waNome = document.getElementById('waNome');
+const waTel = document.getElementById('waTel');
+
+const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbxr0sEepXF1yGWsxmb18n4VxbcpNnQSxGAVkWhdPQJ98xOsgnWelz0upoMN_seaQp-1Sw/exec";
+
+btnNextStep.addEventListener('click', () => {
+  if(!waNome.value || !waTel.value) {
+    alert("Por favor, preencha seu nome e telefone para continuar.");
+    return;
+  }
+  waStep1.style.display = 'none';
+  waStep2.style.display = 'block';
+});
+
+btnPrevStep.addEventListener('click', () => {
+  waStep2.style.display = 'none';
+  waStep1.style.display = 'block';
+});
+
+function resetModal() {
+  waStep2.style.display = 'none';
+  waStep1.style.display = 'block';
+  waForm.reset();
+  btnSubmitForm.innerText = 'Falar com a Anna no WhatsApp';
+}
+
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    waModal.classList.add('active');
+  });
+});
+
+closeModal.addEventListener('click', () => { waModal.classList.remove('active'); resetModal(); });
+waModal.addEventListener('click', (e) => { if(e.target === waModal) { waModal.classList.remove('active'); resetModal(); }});
+
+function redirecionarWhatsapp(nome, obj, local, antes, part){
+  if(typeof fbq !== 'undefined') fbq('track', 'Lead');
+  const text = `Oi, nutri! Me chamo ${nome}, vim do Instagram e gostaria de saber mais.\n\n*Meu objetivo:* ${obj}\n*Formato:* ${local}\n*Já fez antes?* ${antes}\n*Particular?* ${part}`;
+  const endUrl = 'https://wa.me/5521991009723?text=' + encodeURIComponent(text);
+  window.open(endUrl, '_blank');
+  waModal.classList.remove('active');
+  resetModal();
+}
+
+waForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const nome = waNome.value;
+  const telefone = waTel.value;
+  const obj = document.getElementById('waObj').value;
+  const local = document.getElementById('waLocal').value;
+  const antes = document.getElementById('waAntes').value;
+  const part = document.getElementById('waPart').value;
+
+  btnSubmitForm.innerText = 'Enviando...';
+
+  const formData = new FormData();
+  formData.append('Data', new Date().toLocaleString('pt-BR'));
+  formData.append('Nome', nome);
+  formData.append('Telefone', telefone);
+  formData.append('Objetivo', obj);
+  formData.append('Local', local);
+  formData.append('Tinha_Acompanhamento_Antes', antes);
+  formData.append('Busca_Particular_ou_Convenio', part);
+  formData.append('Origem', 'do Instagram');
+
+  fetch(URL_GOOGLE_SCRIPT, { method: 'POST', body: formData, mode: 'no-cors' })
+    .then(() => redirecionarWhatsapp(nome, obj, local, antes, part))
+    .catch(() => redirecionarWhatsapp(nome, obj, local, antes, part));
 });
 </script>
 </body>
